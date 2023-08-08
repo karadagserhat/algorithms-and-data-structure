@@ -1,19 +1,21 @@
-function reverseString_1(str) {
+function reverse1(str) {
   return str.split('').reverse().join('');
 }
 
-function reverseString_2(str) {
-  let reversed = '';
+function reverse2(str) {
+  let r = '';
 
-  for (let character of str) {
-    reversed = character + reversed;
+  for (let char of str) {
+    r = char + r;
   }
 
-  return reversed;
+  return r;
 }
 
-function reverseString_3(str) {
-  return str.split('').reduce((reversed, character) => character + reversed, '');
+function reverse3(str) {
+  return str.split('').reduce((acc, curr) => curr + acc, '');
 }
 
-console.log(reverseString_3('serhat'));
+console.log(reverse1('serhat'));
+console.log(reverse2('serhat'));
+console.log(reverse3('serhat'));
