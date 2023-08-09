@@ -3,9 +3,13 @@ function maxChar_1(str) {
   let max = 0;
   let maxChar = '';
 
+  // for (let char of str) {
+  //   if (charMap[char]) charMap[char]++;
+  //   else charMap[char] = 1;
+  // }
+
   for (let char of str) {
-    if (charMap[char]) charMap[char]++;
-    else charMap[char] = 1;
+    charMap[char] = charMap[char] + 1 || 1;
   }
 
   //   for (let char in charMap) {
