@@ -6,12 +6,6 @@ function anagrams_1(stringA, stringB) {
     return false;
   }
 
-  //   for (let char in aCharMap) {
-  //     if (aCharMap[char] !== bCharMap[char]) {
-  //       return false;
-  //     }
-  //   }
-
   for (let [key, value] of Object.entries(aCharMap)) {
     if (value !== bCharMap[key]) return false;
   }
@@ -30,7 +24,6 @@ function buildCharMap(str) {
 }
 
 /////////////////////
-///////////////
 
 function anagrams_2(stringA, stringB) {
   return cleanString(stringA) === cleanString(stringB);
