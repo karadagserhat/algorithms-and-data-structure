@@ -24,19 +24,27 @@
 // console.log(capitalize('look, it is working'));
 
 /// 9- steps (2)  -> "# "  "##"
-function steps(n) {
-  for (let row = 0; row < n; row++) {
-    let stair = '';
+// console.log(steps(3));
 
-    for (let col = 0; col < n; col++) {
-      if (col <= row) stair += '#';
-      else stair += ' ';
-    }
+/// 10- pyramid
 
-    console.log(stair);
+function maxC(str) {
+  const charMap = {};
+  let max = 0;
+  let maxChar = '';
+
+  for (let char of str) {
+    charMap[char] = charMap[char] + 1 || 1;
   }
+
+  for (let [key, value] of Object.entries(charMap)) {
+    if (value > max) {
+      max = value;
+      maxChar = key;
+    }
+  }
+  return maxChar;
 }
 
-console.log(steps(2));
-console.log(steps(3));
-console.log(steps(3));
+console.log(maxC('abbbc1'));
+console.log(maxC('12222234'));
