@@ -28,23 +28,12 @@
 
 /// 10- pyramid
 
-function maxC(str) {
-  const charMap = {};
-  let max = 0;
-  let maxChar = '';
-
-  for (let char of str) {
-    charMap[char] = charMap[char] + 1 || 1;
-  }
-
-  for (let [key, value] of Object.entries(charMap)) {
-    if (value > max) {
-      max = value;
-      maxChar = key;
-    }
-  }
-  return maxChar;
+function anagrams_2(str1, str2) {
+  return cleanString(str1) === cleanString(str2);
 }
 
-console.log(maxC('abbbc1'));
-console.log(maxC('12222234'));
+function cleanString(str) {
+  return str.replace(/\W/g, '').toLowerCase().split('').sort().join('');
+}
+
+console.log(anagrams_2('Hello!!!', 'he llo!...'));
