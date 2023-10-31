@@ -28,12 +28,10 @@
 
 /// 10- pyramid
 
-function anagrams_2(str1, str2) {
-  return cleanString(str1) === cleanString(str2);
+function py(n) {
+  for (let i = 1; i <= n; i++) {
+    console.log(' '.repeat(n - i) + '#'.repeat(i * 2 - 1)) + ' '.repeat(n - i);
+  }
 }
 
-function cleanString(str) {
-  return str.replace(/\W/g, '').toLowerCase().split('').sort().join('');
-}
-
-console.log(anagrams_2('Hello!!!', 'he llo!...'));
+console.log(py(3));
