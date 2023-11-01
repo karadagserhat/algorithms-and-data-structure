@@ -40,5 +40,26 @@ function slowFib(n) {
 
 const fib = memoize(slowFib);
 
+/////////////
+//********* */
+
+function fibonacciMaster() {
+  let cache = {};
+
+  return function fib(n) {
+    if (n in cache) return cache[n];
+    else {
+      if (n < 2) return n;
+      else {
+        cache[n] = fib(n - 1) + fib(n - 2);
+        return cache[n];
+      }
+    }
+  };
+}
+
+const fasterFib = fibonacciMaster();
+console.log('dp', fasterFib(7));
+
 console.log(fib(7));
 // console.log(fib_2(7));

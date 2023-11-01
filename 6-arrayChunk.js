@@ -25,6 +25,6 @@ function arrayChunk_2(array, size) {
 
 console.log(arrayChunk_2([1, 2, 3, 4, 5, 8, 1], 3));
 
-// console.log(chunk([1, 2, 3, 4], 2));
-// console.log(chunk([1, 2, 3, 4, 5], 2));
-// console.log(chunk([1, 2, 3, 4, 5, 6, 7, 8], 3));
+console.log(chunk([1, 2, 3, 4], 2));
+console.log(chunk([1, 2, 3, 4, 5], 2));
+console.log(chunk([1, 2, 3, 4, 5, 6, 7, 8], 3));

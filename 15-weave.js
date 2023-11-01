@@ -12,14 +12,16 @@ function weave(source1, source2) {
   return q;
 }
 
-// const source1 = new Queue();
-// source1.add(1);
-// source1.add(2);
-// source1.add(3);
+const source1 = new Queue();
+source1.add(1);
+source1.add(2);
+source1.add(3);
+console.log(source1);
 
-// const source2 = new Queue();
-// source2.add('a');
-// source2.add('b');
-// source2.add('c');
+const source2 = new Queue();
+source2.add('a');
+source2.add('b');
+source2.add('c');
+console.log(source2);
 
-// console.log(weave(source1, source2));
+console.log(weave(source1, source2));
