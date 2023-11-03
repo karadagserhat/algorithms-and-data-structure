@@ -40,66 +40,34 @@
 
 //********* */
 // 16- (stack)
-class Stack {
-  constructor() {
-    this.data = [];
+
+//*********** */
+// 17- (queueFromStack)  Stack + Stack = Queue
+
+//********* */
+// 18- (linkedList)
+
+//********* */
+// 19- midpoint
+
+//********** */
+// 20- circularList
+
+//*********** */
+// 21- fromLast
+
+function fromLast(list, n) {
+  let slow = list.head;
+  let fast = list.head;
+
+  while (n > 0) {
+    fast = fast.next;
+    n--;
   }
 
-  push(record) {
-    this.data.push(record);
+  while (fast.next) {
+    slow = slow.next;
+    fast = fast.next;
   }
-
-  pop() {
-    return this.data.pop();
-  }
-
-  peek() {
-    return this.data.at(-1);
-  }
+  return slow;
 }
-
-class Queue {
-  constructor() {
-    this.firstStack = new Stack();
-    this.secondStack = new Stack();
-  }
-
-  add(n) {
-    return this.firstStack.push(n);
-  }
-
-  remove() {
-    while (this.firstStack.peek()) {
-      this.secondStack.push(this.firstStack.pop());
-    }
-
-    const record = this.secondStack.pop();
-
-    while (this.secondStack.peek()) {
-      this.firstStack.push(this.secondStack.pop());
-    }
-
-    console.log(record);
-  }
-
-  peek() {
-    while (this.firstStack.peek()) {
-      this.secondStack.push(this.firstStack.pop());
-    }
-
-    const record = this.secondStack.peek();
-
-    while (this.secondStack.peek()) {
-      this.firstStack.push(this.secondStack.pop());
-    }
-
-    console.log(record);
-  }
-}
-
-const q = new Queue();
-q.add(6);
-q.add(5);
-q.add(3);
-console.log(q);
-console.log(q.peek());
