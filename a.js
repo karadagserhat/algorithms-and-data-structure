@@ -56,18 +56,19 @@
 //*********** */
 // 21- fromLast
 
-function fromLast(list, n) {
-  let slow = list.head;
-  let fast = list.head;
+//********** */
+// 22- Tree
 
-  while (n > 0) {
-    fast = fast.next;
-    n--;
+class Node {
+  constructor(data) {
+    this.data = data;
+    this.children = [];
   }
 
-  while (fast.next) {
-    slow = slow.next;
-    fast = fast.next;
+  add(data) {
+    const node = new Node(data);
+    this.children.push(node);
   }
-  return slow;
+
+  remove(data) {}
 }
