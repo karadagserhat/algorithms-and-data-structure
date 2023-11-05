@@ -59,16 +59,34 @@
 //********** */
 // 22- Tree
 
-class Node {
-  constructor(data) {
-    this.data = data;
-    this.children = [];
-  }
+//********** */
+// 26- bubble sort
 
-  add(data) {
-    const node = new Node(data);
-    this.children.push(node);
-  }
+//********** */
+// 27- selection sort
 
-  remove(data) {}
+/********* */
+// 28- merge sort
+
+function mergeSort(arr) {
+  if (arr.length === 1) return arr;
+
+  const center = Math.floor(arr.length / 2);
+  const left = arr.slice(0, center);
+  const right = arr.slice(center);
+
+  return merge(mergeSort(left), mergeSort(right));
 }
+
+function merge(left, right) {
+  const results = [];
+
+  while (left.length && right.length) {
+    if (left[0] < right[0]) results.push(left.shift());
+    else results.push(right.shift());
+  }
+
+  return [...results, ...left, ...right];
+}
+
+console.log(mergeSort([1, 2, 3, 55, 3, 44, 66, -12]));
