@@ -41,6 +41,21 @@
 //********* */
 // 16- (stack)
 
+class Stack {
+  constructor() {
+    this.data = [];
+  }
+
+  add(n) {
+    return this.data.push(n);
+  }
+}
+
+const s = new Stack();
+s.add(2);
+s.add(5);
+console.log(s);
+
 //*********** */
 // 17- (queueFromStack)  Stack + Stack = Queue
 
