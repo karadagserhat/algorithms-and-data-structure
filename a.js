@@ -51,11 +51,6 @@ class Stack {
   }
 }
 
-const s = new Stack();
-s.add(2);
-s.add(5);
-console.log(s);
-
 //*********** */
 // 17- (queueFromStack)  Stack + Stack = Queue
 
