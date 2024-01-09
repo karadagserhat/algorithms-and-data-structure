@@ -18,11 +18,11 @@ class Queue {
 
 module.exports = Queue;
 
-// const q = new Queue();
-// q.add(1);
-// q.add(2);
-// q.add(3);
-// q.remove();
-// q.remove();
-// q.remove();
-// console.log(q);
+const q = new Queue();
+q.add(1);
+q.add(2);
+q.add(3);
+q.remove();
+q.remove();
+q.remove();
+console.log(q);
