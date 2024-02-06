@@ -121,8 +121,22 @@ function steps(n) {
 //*********** */
 // 11- (vowel) "serhat" -> 2
 
+function vowel(str) {
+  return str.replace(/[^aeiou]/gi, '').length;
+}
+
 //************ */
 // 13- (fibonacci) 1 1 2 3 5 8 13
+
+function fibonacci(n) {
+  const arr = [1, 1];
+
+  for (let i = 2; i < n; i++) {
+    arr[i] = arr[i - 1] + arr[i - 2];
+  }
+
+  return arr;
+}
 
 //********* */
 // 14- (queue)
